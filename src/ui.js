@@ -16,8 +16,8 @@ const clone = o => JSON.parse(JSON.stringify(o));
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const rid = () => Math.random().toString(36).slice(2, 10);
 
-let prefs = Object.assign({ name: 'Tu', bots: 3, localNames: ['Jogador 1', 'Jogador 2'], localBots: 1, level: 'normal', mode: 'solo', dealerRule: false, dealAll: false, upDown: false,
-  trumpRotation: false, mustTrump: false, hint: false, four: false, fast: false }, load(PREF) || {});
+let prefs = Object.assign({ name: 'Tu', bots: 3, localNames: ['Jogador 1', 'Jogador 2'], localBots: 1, level: 'normal', mode: 'solo', dealerRule: false, dealAll: false, upDown: true,
+  trumpRotation: false, mustTrump: false, hint: false, four: false, fast: true }, load(PREF) || {});
 if (!load(PREF)) { const old = load('vazas.prefs.v1'); if (old) { Object.assign(prefs, old); if (old.players) prefs.bots = old.players - 1; } }
 prefs.bots = clamp(prefs.bots | 0, 2, 9);
 const settingsFromPrefs = () => ({ fullDeck: !!prefs.fullDeck, dealerRule: prefs.dealerRule, dealAll: prefs.dealAll, upDown: prefs.upDown, trumpRotation: prefs.trumpRotation, mustTrump: prefs.mustTrump });
