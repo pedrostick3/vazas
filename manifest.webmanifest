@@ -1,0 +1,13 @@
+{
+  "name": "Vazas",
+  "short_name": "Vazas",
+  "description": "Jogo de cartas de apostas: acerta nas vazas que fazes.",
+  "lang": "pt-PT",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#17325E",
+  "theme_color": "#17325E",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
